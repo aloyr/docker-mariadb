@@ -5,6 +5,8 @@ services:
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: "${MARIADB_ROOT_PASSWORD}"
+    volumes:
+      - /opt/docker/mariadb/data:/var/lib/mysql
 
   adminer:
     image: adminer
